@@ -8,11 +8,11 @@ class ListMovieRepo {
   final BaseApiService _apiService = NetworkApiService();
 
   @override
-  Future<MovieModel?> getListMovies() async {
+  Future<ListMovieModel?> getListMovies() async {
     try {
-      dynamic response = await _apiService.getResponse(ApiEndPoints().LIST_MOVIES);
+      dynamic response = await _apiService.getResponse(ApiEndPoints().LIST_MOVIES_POPULAR);
       print("Log: $response");
-      final jsonData = MovieModel.fromJson(response);
+      final jsonData = ListMovieModel.fromJson(response);
       return jsonData;
     } catch (e) {
       throw e;

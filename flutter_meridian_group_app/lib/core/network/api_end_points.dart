@@ -1,4 +1,4 @@
 class ApiEndPoints {
-  final String LIST_MOVIES = "3/movie/550";
+  final String LIST_MOVIES_POPULAR = "3/movie/popular";
 }
 

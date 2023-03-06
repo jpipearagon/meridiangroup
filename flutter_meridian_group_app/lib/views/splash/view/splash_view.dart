@@ -85,7 +85,7 @@ class _TitleLogoWidget extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  "Splash",
+                  "",
                   textAlign: TextAlign.center,
                 ),
                 const CircularProgressIndicator.adaptive()

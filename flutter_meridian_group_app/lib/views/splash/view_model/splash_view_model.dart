@@ -9,7 +9,7 @@ class SplashViewModel extends ViewModel<SplashData> {
 
   Future<void> delaySplash() async {
     _updateState(showSplash: true);
-    await Future.delayed(const Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 5));
   }
 
   void _updateState({

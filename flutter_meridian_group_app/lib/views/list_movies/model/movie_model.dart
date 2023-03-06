@@ -41,12 +41,10 @@ class MovieModel {
     required this.releaseDate,
     required this.title,
     required this.video,
-    required this.voteAverage,
-    required this.voteCount,
   });
   late final bool adult;
   late final String backdropPath;
-  late final List<int> genreIds;
+  late final List<double?> genreIds;
   late final int id;
   late final String originalLanguage;
   late final String originalTitle;
@@ -56,13 +54,11 @@ class MovieModel {
   late final String releaseDate;
   late final String title;
   late final bool video;
-  late final double? voteAverage;
-  late final int voteCount;
   
   MovieModel.fromJson(Map<String, dynamic> json){
     adult = json['adult'];
     backdropPath = json['backdrop_path'];
-    genreIds = List.castFrom<dynamic, int>(json['genre_ids']);
+    genreIds = List.castFrom<dynamic, double?>(json['genre_ids']);
     id = json['id'];
     originalLanguage = json['original_language'];
     originalTitle = json['original_title'];
@@ -72,8 +68,6 @@ class MovieModel {
     releaseDate = json['release_date'];
     title = json['title'];
     video = json['video'];
-    voteAverage = json['vote_average'];
-    voteCount = json['vote_count'];
   }
 
   Map<String, dynamic> toJson() {
@@ -90,8 +84,6 @@ class MovieModel {
     _data['release_date'] = releaseDate;
     _data['title'] = title;
     _data['video'] = video;
-    _data['vote_average'] = voteAverage;
-    _data['vote_count'] = voteCount;
     return _data;
   }
 }
