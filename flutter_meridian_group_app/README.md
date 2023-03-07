@@ -3,7 +3,7 @@ Meridian Group Flutter
 
 Arquitectura utilizada:
 
-![mvvm](flutter_meridian_group_app/mvvm_arch.png)
+![mvvm](../mvvm_arch.png)
 
 El proyecto lo centre mas en implmentar una arquitectura escalable y robusta, usando inyeccion de dependencias con provider, injectable y get_it para el uso de InheritedWidget y ChangeNotifier de una forma mas clara y directa.
 
